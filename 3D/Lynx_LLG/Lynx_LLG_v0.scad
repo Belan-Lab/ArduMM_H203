@@ -1,15 +1,15 @@
 FDM_offset = 0.1;
 
-llg_d = 8;
+llg_d = 8.2;
 
-base_d = 35;
-base_h = 5;
+base_d = 30;
+base_h = 6;
 
-tube_d = 12;
-tube_h = 40;
+tube_d = 13;
+tube_h = 25;
 
 hole_d = 3;
-hole_pos = 12;
+hole_pos = (22.45 - 2.95)/2;
 
 
 module lynx_llg (){

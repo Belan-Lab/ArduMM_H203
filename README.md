@@ -44,7 +44,7 @@ _Note: Y0 stay unused because it is HIGH when all arduino pins are LOW._
 
 # Lynx
 
-Lumencor Lynx - 4 colour OEM modification of the Lumencor Aura II.
+Lumencor Lynx (__Lynx 4-GEH-FA__, serial No. 7918, power supply 24V / 1.7A DC) - 4 colour OEM modification of the Lumencor Aura II.
 
 ### Light path
 <img src="pic/Lynx_light_path.jpg" style="zoom:50%;" />
@@ -85,7 +85,7 @@ _Note: Lynx's DB15M pin-out is the same with Lumencor Aura II_
 
 ### Liquid light guide coupling
 
-Coupling with proprietary liquid light guide Olympus U-LLG150.
+Coupling with proprietary liquid light guide [Olympus U-LLG150](https://evidentscientific.com/en/products/light-sources/u-lgps).
 
 |Original LLG port| LLG port model|
 |:-:|:-:|
