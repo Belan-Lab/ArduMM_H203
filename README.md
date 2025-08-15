@@ -6,7 +6,7 @@ ArduMM Controllers for Lab 203
 # PhotonMaker
 [Manual](https://www.nanotoolsbio.com/_files/ugd/c3bee4_bcea98b0b7ba4d2aa8f413fe1c6c36ac.pdf)
 
-[DB15 color code](https://cdn.graftek.com/system/files/14147/original/785605-01.pdf)
+Standard [DB15 color code](https://cdn.graftek.com/system/files/14147/original/785605-01.pdf)
 
 ### TTL trigger IN
 <img src="pic/PhotonMaker_DB-15M_trigger_IN.png" style="zoom:75%;" />
@@ -53,12 +53,12 @@ Top filter - 390-475-632 (11-1083)
 Bottom filter - 542/33-25
 
 ### Wavelength
-|Ch. name| Filter max | Ch. num | Lynx DB15 IN |
+|Ch. name| Installed filters mid **λ** | Lynx DB15 IN | Approx. power at the Olympus U-LLG150 output |
 |:-:|:-:|:-:|:-:|
-|Violet (405 nm)|390 nm|1|12|
-|Cyan (488 nm)  |475 nm|2|3|
-|Green (540 nm) |542 nm|3|2|
-|Red (640 nm)   |632 nm|4|15|
+|Violet (405 nm)|390 nm|3|24 mW|
+|Cyan (488 nm)  |475 nm|12|23 mW|
+|Green (540 nm) |542 nm|2|12 mW|
+|Red (640 nm)   |632 nm|1|14 mW|
 
 _Note: it's estimated channels wavelength, exact filters parameters are unknown._
 
@@ -71,22 +71,27 @@ _Note: Lynx's DB15M pin-out is the same with Lumencor Aura II_
 
 ## Lynx setup
 
-### System config
+### ArduMM digital IO
 
 | Arduino PIN | Bit  | Decimal Value ON | Use    | Lynx DB15 PIN |
 | :--: | :--: | :--------------: | :----: | :-----: |
-|  8   |  0   |        1         | Violet ||
-|  9   |  1   |        2         | Cyan   ||
-|  10  |  2   |        4         | Green  ||
-|  11  |  3   |        8         | Red    ||
-|  12  |  4   |        16        | BNC    ||
-|  13  |  5   |        32        | BNC    ||
+|  8   |  0   |        1         | Violet |3|
+|  9   |  1   |        2         | Cyan   |12|
+|  10  |  2   |        4         | Green  |2|
+|  11  |  3   |        8         | Red    |1|
+|  12  |  4   |        16        | BNC    |n/a|
+|  13  |  5   |        32        | BNC    |n/a|
 
 
 ### Liquid light guide coupling
 
-Coupling with proprietary liquid light guide [Olympus U-LLG150](https://evidentscientific.com/en/products/light-sources/u-lgps).
+Coupling with proprietary 3 mm liquid light guide [Olympus U-LLG150](https://evidentscientific.com/en/products/light-sources/u-lgps).
 
 |Original LLG port| LLG port model|
 |:-:|:-:|
 |<img src="pic/Lynx_llg_mount.jpg" width="300">|<img src="pic/Lynx_llg_model.png" width="300">|
+
+
+## STL Models
+The following models from open sources were used in this project:
+- [OpenSCAD Arduino Mounting library](https://github.com/kellyegan/OpenSCAD-Arduino-Mounting-Library)
